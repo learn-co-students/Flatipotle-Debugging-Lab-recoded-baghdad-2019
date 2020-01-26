@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import ProteinForm from './ProteinForm'
-import FillingForm from './FillingForm'
-import ToppingForm from './ToppingForm'
-import SideForm from './SideForm'
+import React, { Component } from 'react';
+import ProteinForm from './ProteinForm';
+import FillingForm from './FillingForm';
+import ToppingForm from './ToppingForm';
+import SideForm from './SideForm';
 
 const DEFAULT_STATE = {
   protein: [],
@@ -17,7 +17,7 @@ class Form extends Component {
   }
 
   handleSubmit() {
-    event.preventDefault()
+    this.event.preventDefault()
     document.getElementById("order-form").reset()
     this.props.addOrder(this.state)
 
@@ -27,8 +27,8 @@ class Form extends Component {
   }
 
   handleChange() {
-    const itemType = event.target.name
-    const item = event.target.value
+    const itemType = this.event.target.name
+    const item = this.event.target.value
 
     !this.state[`${itemType}`].includes(item) ?
       this.setState({
@@ -76,4 +76,4 @@ class Form extends Component {
   }
 }
 
-export default Form
+export default Form;
